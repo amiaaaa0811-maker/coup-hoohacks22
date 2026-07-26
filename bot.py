@@ -15,7 +15,9 @@ cardnums = ['🅰', '🅱']
 
 class GameClient(discord.Client):
     def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+        intents = discord.Intents.default()
+        intents.message_content = True
+        super().__init__(intents=intents, *args, **kwargs)
         self.game_running = False
         self.game_inst = None
         self.in_q = False
