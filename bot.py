@@ -1,13 +1,12 @@
 from pydoc import describe
 from turtle import pos
 import discord
-import json
+import os
 from CoupGame import CoupGame
 import asyncio
 import math
 
-auth = json.load(open('auth.json'))
-token = auth['discord-token']['token']
+token = os.environ['DISCORD_TOKEN']
 
 NUMREACTS = ['0️⃣','1️⃣','2️⃣','3️⃣', '4', '5️⃣','6️⃣','7️⃣']
 ALLACTIONS = ['0: Tax', '1: Assassinate', '2: Exchange', '3: Steal', '4: blank', '5: Income', '6: Foreign Aid', '7: Coup']
