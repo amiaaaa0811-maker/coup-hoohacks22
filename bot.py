@@ -1,5 +1,4 @@
 from pydoc import describe
-from turtle import pos
 import discord
 import os
 from CoupGame import CoupGame
